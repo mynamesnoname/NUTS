@@ -1,2 +1,12 @@
 *.py[oc]
 *.sw[po]
+build/lib/nuts/__init__.py
+build/lib/nuts/emcee_nuts.py
+build/lib/nuts/helpers.py
+build/lib/nuts/nuts.py
+nuts.egg-info/dependency_links.txt
+nuts.egg-info/not-zip-safe
+nuts.egg-info/PKG-INFO
+nuts.egg-info/SOURCES.txt
+nuts.egg-info/top_level.txt
+nuts/nuts.py

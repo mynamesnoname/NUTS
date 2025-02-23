@@ -199,6 +199,8 @@ def build_tree(theta, r, grad, logu, v, j, epsilon, f, joint0):
             alphaprime = alphaprime + alphaprime2
             nalphaprime = nalphaprime + nalphaprime2
 
+    #print(f'j={j},tprime/t+={thetaprime/thetaplus},tprime/t-={thetaprime/thetaminus}')
+
     return thetaminus, rminus, gradminus, thetaplus, rplus, gradplus, thetaprime, gradprime, logpprime, nprime, sprime, alphaprime, nalphaprime
 
 
@@ -334,6 +336,7 @@ def nuts6(f, M, Madapt, theta0, delta=0.6, progress=False):
             epsilonbar = exp((1. - eta) * log(epsilonbar) + eta * log(epsilon))
         else:
             epsilon = epsilonbar
+            
     samples = samples[Madapt:, :]
     lnprob = lnprob[Madapt:]
     return samples, lnprob, epsilon
